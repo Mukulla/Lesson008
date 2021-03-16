@@ -29,6 +29,8 @@ namespace Lesson008
         bool WasSorted = false;
 
         int Min = 0, Max = 0, Limit = 0, Step = 19, Pages = 0, CurrentPage = 0;
+
+        bool SomeThingWrong = false;
         public Tasker()
         {
             Process[] PArray001 = Process.GetProcesses();
@@ -126,8 +128,9 @@ namespace Lesson008
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Failed to delete process ");
-                }                
+                    SomeThingWrong = true;
+                }
+                return;
             }
 
             if (SomeKey == ConsoleKey.F1)
@@ -146,6 +149,7 @@ namespace Lesson008
                 }
 
                 WasSorted = true;
+                return;
             }
             if (SomeKey == ConsoleKey.F2)
             {
@@ -162,6 +166,7 @@ namespace Lesson008
                     SortList.Add(Tempo);
                 }
                 WasSorted = true;
+                return;
             }
 
             if (SomeKey == ConsoleKey.F3)
@@ -210,6 +215,12 @@ namespace Lesson008
             Console.WriteLine("Press F1 To Sort By ID");
             Console.WriteLine("Press F2 To Sort By Name");
             Console.WriteLine("Press F3 To Reset Sorting");
+
+            if(SomeThingWrong)
+            {
+                Console.WriteLine("Failed To Delete Process ");
+                SomeThingWrong = false;
+            }            
         }
     }
 }
