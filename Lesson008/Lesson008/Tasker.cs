@@ -210,6 +210,7 @@ namespace Lesson008
             Console.WriteLine($"Total Pocesses Found: {Limit} | Page: {CurrentPage} Of {Pages}");
             Console.WriteLine("Press Escape To Exit Porgram");
             Console.WriteLine("Press PageUp And PageDown To Scroll The List");
+            Console.WriteLine("Press Home And End To Start Or The End Of List");
             Console.WriteLine("Press Up And Down Arrow To Select Process");
             Console.WriteLine("Press Del To Delete Marked Process");
             Console.WriteLine("Press F1 To Sort By ID");
