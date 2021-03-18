@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8509E1A-2CF1-47AB-AE4C-8ED8C2DAD25F}</ProjectGuid>
+    <ProjectGuid>{606F1EC8-CDED-4BCE-8AC7-53B94DF6B5DF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson008</RootNamespace>
-    <AssemblyName>Lesson008</AssemblyName>
+    <RootNamespace>TryToLib</RootNamespace>
+    <AssemblyName>TryToLib</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MyLibCSharp001">
-      <HintPath>..\MyLibCSharp001.dll</HintPath>
+    <Reference Include="EasyLibe">
+      <HintPath>..\EasyLibe\bin\Debug\EasyLibe.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tasker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
